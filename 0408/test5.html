@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        //배열선언 : new Array();
+        const arr1 = new Array();
+        console.log("arr1 : " + arr1);
+        console.log("============================");
+
+        const arr2 = ["사과","배","바나나","딸기","수박"];
+        console.log("arr2 : " + arr2);
+        console.log("1. " + arr2.length);
+        console.log("2. " + arr2[0]);
+        console.log("3. " + arr2[1]);
+        console.log("4. " + arr2[2]);
+        console.log("5. " + arr2[3]);
+        console.log("6. " + arr2[4]);
+        console.log("=============================");
+        for(let i=0; i<arr2.length; i++) {
+            console.log((i+7) + ".arr2["+i+"]="+arr2[i]);
+        }
+        console.log("12. " + arr2[arr2.length-1]);   //마지막자료 나타내기
+        console.clear();
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+        //자바스크립트에서의 향상된 for문
+        let cnt=0;
+        for(let arr of arr2) {    // : 대신 of를 사용
+            console.log("arr2["+cnt+"]=" + arr);
+            cnt++
+        }
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        //forEach문을 이용한 반복 출력 : 객체명.forEach(요소변수,인덱스,객체변수);   //괄호안은 안써도 실행은 됨. 하지만 값이 안나오겠지
+        arr2.forEach(function(){
+            console.log("값 : " + "/");
+        })
+        console.log("=============================================");
+        // arr2.forEach(function(arr,index,array){
+        arr2.forEach(function(arr){
+            console.log(arr + "/");
+        });
+        //forEach와 Arrow Function
+        arr2.forEach((arr)=>{
+            console.log(arr + "/")
+        });
+        arr2.forEach((arr)=>console.log(arr + "/"));
+
+        console.log("========================================");
+        arr2.forEach (function(arr,index,array) {      //요소변수 arr은 하나씩 가져오고  객체변수array는 모든값을 가져옴
+            console.log(index+"."+arr+"/"+array);
+        });
+
+        console.log("========================================");
+        arr2.forEach (function(arr,index) {
+            console.log(index+"."+arr);
+        });
+        
+        console.log("======================================");
+        arr2.forEach((arr,index)=> console.log(arr,index));
+    </script>
+</head>
+<body>
+    <h2>배열연습</h2>
+=======
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5.html</title>
+  <script>
+    'use strict';
+
+    // 배열선언 : new Array();
+    const arr1 = new Array();
+    console.log("arr1: " + arr1);
+    console.log("====================");
+
+    const arr2 = ["사과","배","바나나","딸기","수박"];
+    console.log("arr2: " + arr2);
+    console.log("1. " + arr2.length);
+    console.log("2. " + arr2[0]);
+    console.log("3. " + arr2[1]);
+    console.log("4. " + arr2[2]);
+    console.log("5. " + arr2[3]);
+    console.log("6. " + arr2[4]);
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    for(let i=0; i<arr2.length; i++) {
+      console.log((i+7)+". arr2["+i+"]="+arr2[i]);
+    }
+    // 마지막 자료를 출력하세요.(배열의 크기를 모른다고 가정할때.)
+    console.log("12. " + arr2[arr2.length-1]);
+    // console.clear();
+    console.log("!!!!!!!!!!!!!!!!!!!!!!!!");
+
+    // 향상된 for문
+    let cnt = 0;
+    for(let arr of arr2) {
+      console.log("arr2["+cnt+"]=" + arr);
+      cnt++;
+    }
+    console.log("############");
+
+    // forEach문을 이용한 반복 출력 : 객체명.forEach([요소변수, 인덱스, 객체변수]);
+    arr2.forEach(function(){
+      console.log("값 : " + "/");
+    });
+    console.log("~~~~~~~~~~~~~~~~~~~~");
+    // arr2.forEach(function(arr,index,array){
+    arr2.forEach(function(arr){
+      console.log(arr + "/");
+    });
+    console.log("$$$$$$$$$$$$$$$$$$$");
+    // forEach와 Arrow Function
+    arr2.forEach((arr) => {
+      console.log(arr + "/");
+    });
+    console.log("%%%%%%%%%%%%%%%%%%%%");
+    // forEach와 Arrow Function
+    arr2.forEach((arr) => console.log(arr + "/"));
+
+    console.log("^^^^^^^^^^^^^^^^^^^^^^^^");
+    arr2.forEach(function(arr, index, array) {
+      console.log(index + "." + arr + "/" + array);
+    });
+    console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    arr2.forEach(function(arr, index) {
+      console.log(index + "." + arr);
+    });
+    
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~");
+    arr2.forEach((arr, index) => console.log(index + "." + arr));
+
+    let ar = ["야호","안녕","바이"];
+    ar.forEach((arr,index)=>{
+      console.log(index+". "+arr);
+    })
+  </script>
+</head>
+<body>
+  <h2>배열연습</h2>
+>>>>>>> 04a5bac (220413)
+</body>
+</html>

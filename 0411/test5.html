@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let newText="";
+        let idx=0;
+        function inputBox() {
+            idx++;
+            // let newText ="";
+            newText += "<div id='txt"+idx+"'>";   //텍스트창과 삭제버튼을 함께 없애기위해 div로 묶어줌
+            newText += idx + ".<input type='text' name='pummok"+idx+"' id='pummok' /> ";
+            newText += "<input type='button' value='"+idx+".삭제' onclick='deleteBox("+idx+")'/><br/> ";
+            document.getElementById("demo").innerHTML = newText;
+            newText += "</div>"
+        }
+        function deleteBox(idx) {
+            alert("idx : " + idx)
+            let txt = 'txt' + idx;
+            let element = document.getElementById(txt);   //괄호안에 ""가아니고 변수를 넣는거니 ""넣으면안댐
+            element.parentNode.removeChild(element);      //부모를 지운다 해서 parentNode 
+        }
+    </script>
+</head>
+<body>
+    <h2>입력창 추가예제(동적폼)</h2>
+    <form name="myForm">
+        <p><input type="button" value="입력창추가" onclick="inputBox()"/></p>
+        <p><input type="button" value="입력창모두제거" onclick="location.reload()"/></p>
+        <div id="demo"></div>
+    </form>
+</body>
+</html>

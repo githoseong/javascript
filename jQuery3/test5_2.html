@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5_2.html</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    'use strict';
+    $(function(){
+      let x=0;
+      let y=0;
+      //$('button[name="moveRight"]').click(function(){});
+      $('#moveRight').click(function(){
+        if(x>=10) {
+          alert("오른쪽으로 더이상 진행할수 없습니다.");
+          return;
+        }
+        x++;
+        $('#img1').animate(
+          {marginLeft: (x*50)+"px"}
+        );
+      });
+      $('#moveLeft').click(function(){
+        if(x<=0) {
+          alert("왼쪽으로 더이상 진행할수 없습니다.");
+          return;
+        }
+        x--;
+        $('#img1').animate(
+          {marginLeft: (x*50)+"px"}
+        );
+      });
+      $('#moveDown').click(function(){
+        if(y>=10) {
+          alert("아래쪽으로 더이상 진행할수 없습니다.");
+          return;
+        }
+        y++;
+        $('#img1').animate(
+          {marginTop: (y*50)+"px"}
+        );
+      });
+      $('#moveUp').click(function(){
+        if(y<=0) {
+          alert("위쪽으로 더이상 진행할수 없습니다.");
+          return;
+        }
+        y--;
+        $('#img1').animate(
+          {marginTop: (y*50)+"px"}
+        );
+      });
+    });
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>Animation 연습</h2>
+  <hr/>
+  <button type="button" name="moveLeft" id="moveUp">위쪽이동</button><br/>
+  <button type="button" name="moveLeft" id="moveLeft">왼쪽이동</button>
+  <button type="button" name="moveRight" id="moveRight">오른쪽이동</button><br/>
+  <button type="button" name="moveLeft" id="moveDown">아래쪽이동</button>
+  <p><br/></p>
+  <div>
+    <img src="../../images/1.jpg" id="img1" width="100px" height="100px"/>
+  </div>
+
+</div>
+<p><br/></p>
+</body>
+</html>
